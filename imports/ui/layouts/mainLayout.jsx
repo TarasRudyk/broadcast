@@ -1,4 +1,5 @@
 import React from 'react';
+import AccountUI from '../components/accountUI'
 
 export const mainLayout = ({content}) => (
 	<div className="broadcast">
@@ -7,6 +8,7 @@ export const mainLayout = ({content}) => (
 		<a href="/">Broadcast</a>
 		<a href="/profile">Profile</a>
 		<a href="/about">About owner</a>
+		<AccountUI />
 	</nav>
 	<main>
 	 {content}
