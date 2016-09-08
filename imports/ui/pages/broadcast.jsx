@@ -10,11 +10,23 @@ import BroadcastList from '../components/broadcastList';
 
 export default class Broad extends TrackerReact(React.Component) {
 
-  
+  constructor(){
+  	super();
+
+  	this.state = {
+  		subscription: {
+  			message: Meteor.subscribe("allBroadcast")
+  		}
+  	}
+  }
+
+  componentWillUnmount() {
+      this.state.subscription.message.stop();
+  }
+
 	broadcasts() {
 		return Broadcast.find().fetch();
 	}
-
 
 	render() {
 

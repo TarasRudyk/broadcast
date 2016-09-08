@@ -21,7 +21,8 @@ export default class MessageForm extends Component {
 
 		return (
 			<form className="broadcasts" onSubmit={this.addBroadcast.bind(this)}>
-				<input type="text" ref="message" placeholder="Leave message here..." />
+				<textarea type="text" ref="message" placeholder="Leave message here..." />
+        <button type="submit">Post</button>
 			</form>
 		)
 	}
