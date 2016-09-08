@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
 
+import '../../api/methods'
+
 export default class MessageForm extends Component {
   
   addBroadcast(event) {
     event.preventDefault();
-    var message = this.refs.message.value.trim();
+    var post = this.refs.message.value.trim();
     
-    Broadcast.insert({
-      message: message,
-      complete: false,
-      createdAt: new Date(),
+    Meteor.call('addMessage', post, ()=>{
+      this.refs.message.value = '';
     });
 
-    this.refs.message.value = '';
+    
   }
 
 
