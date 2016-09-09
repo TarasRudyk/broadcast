@@ -10,15 +10,9 @@ export default class MessageForm extends Component {
     
     Meteor.call('addMessage', post, ()=>{
       this.refs.message.value = '';
-    });
-
-    
+    }); 
   }
-
-
   render() {
-    
-
 		return (
 			<form className="broadcasts" onSubmit={this.addBroadcast.bind(this)}>
 				<textarea type="text" ref="message" placeholder="Leave message here..." />

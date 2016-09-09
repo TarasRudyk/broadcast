@@ -1,12 +1,15 @@
 import { Meteor } from 'meteor/meteor'
 import { Mongo } from 'meteor/mongo';
 
-Broadcast = new  Mongo.Collection('broadcast');
+Broadcast = new Mongo.Collection('broadcast');
+Users = Meteor.users;
 
 if(Meteor.isServer){
 	Meteor.publish("allBroadcast", function(){
 		return Broadcast.find();
 	});
-
+	Meteor.publish('users',function(){
+		return Users.find()
+	});
 
 };
