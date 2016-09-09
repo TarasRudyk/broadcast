@@ -5,6 +5,8 @@ import '../../api/publications.js';
 import '../../api/methods'
 
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
+import UpdateName from '../components/updateName';
+import UpdateEmail from '../components/updateEmail';
 
 
 export default class Profile extends TrackerReact(React.Component) {
@@ -22,8 +24,8 @@ export default class Profile extends TrackerReact(React.Component) {
 			<div>
 				<h1>Profile</h1>
 				<div className="updateData">
-						Email 
-						Name
+						Email <UpdateEmail />
+						Name <UpdateName />
 						Location 
 						<select className="location" ref="locat" onChange={this.handleChange.bind(this)}>
 							<option defaultValue="n/a">n/a</option>
