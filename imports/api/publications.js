@@ -8,8 +8,9 @@ if(Meteor.isServer){
 	Meteor.publish("allBroadcast", function(){
 		return Broadcast.find();
 	});
+
 	Meteor.publish('users',function(){
-		return Users.find()
+		return Users.find({_id:this.userId})
 	});
 
 };

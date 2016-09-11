@@ -5,11 +5,30 @@ import '../../api/publications.js';
 import '../../api/methods'
 
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
-import UpdateName from '../components/updateName';
-import UpdateEmail from '../components/updateEmail';
+import ProfileData from '../components/profileData.jsx';
 
 
 export default class Profile extends TrackerReact(React.Component) {
+
+    constructor(){
+  	super();
+
+  	this.state = {
+  		subscription: {
+  			user: Meteor.subscribe("users")
+  		}
+  	}
+  }
+
+  componentWillUnmount() {
+      this.state.subscription.user.stop();
+  }
+
+	users() {
+		return Meteor.users.find().fetch();
+	}
+
+
 
   handleChange(event) {
   	event.preventDefault();
@@ -23,9 +42,12 @@ export default class Profile extends TrackerReact(React.Component) {
 		return (
 			<div>
 				<h1>Profile</h1>
+					<ul>
+						{this.users().map((user)=>{
+							return <ProfileData key={user._id} user={user}/>
+						})}
+					</ul>
 				<div className="updateData">
-						Email <UpdateEmail />
-						Name <UpdateName />
 						Location 
 						<select className="location" ref="locat" onChange={this.handleChange.bind(this)}>
 							<option defaultValue="n/a">n/a</option>
@@ -35,7 +57,6 @@ export default class Profile extends TrackerReact(React.Component) {
 						  <option value="Odesa">Odesa</option>
 						  <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
 						  <option value="Lviv">Lviv</option>
-
 						</select>
 				</div>
 
