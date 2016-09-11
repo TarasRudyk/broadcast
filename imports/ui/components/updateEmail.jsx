@@ -8,7 +8,8 @@ export default class NameEmail extends Component {
     event.preventDefault();
     var email = this.refs.email.value.trim();
     
-    Meteor.call('setEmail', email); 
+    Meteor.call('setEmail', email, ()=>{
+      this.refs.email.value = ''}); 
   }
   render() {
 		return (

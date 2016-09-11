@@ -9,6 +9,7 @@ import UpdateName from '../components/updateName';
 import UpdateEmail from '../components/updateEmail';
 
 
+
 export default class Profile extends TrackerReact(React.Component) {
 
   handleChange(event) {
@@ -22,11 +23,11 @@ export default class Profile extends TrackerReact(React.Component) {
 	render() {
 		return (
 			<div>
-				<h1>Profile</h1>
+				<h1>Profile</h1> 
 				<div className="updateData">
-						Email <UpdateEmail />
-						Name <UpdateName />
-						Location 
+						<span>Email: </span><UpdateEmail />
+						<span>Name: </span><UpdateName />
+						<span>Location: </span> 
 						<select className="location" ref="locat" onChange={this.handleChange.bind(this)}>
 							<option defaultValue="n/a">n/a</option>
 						  <option value="Kyiv">Kyiv</option>
