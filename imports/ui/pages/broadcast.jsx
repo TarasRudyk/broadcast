@@ -32,15 +32,16 @@ export default class Broad extends TrackerReact(React.Component) {
 
 
 		return (
-			<div>
-				<h1>Broadcast</h1>
-					<MessageForm/>
-					<ul>
-						{this.broadcasts().map((broadcast)=>{
-							return <BroadcastList key={broadcast._id} broadcast={broadcast}/>
-						})}
-					</ul>
-
+			
+			<div className="center-align">
+			<MessageForm/>
+						<div>	
+							<ul>
+								{this.broadcasts().map((broadcast)=>{
+									return <BroadcastList key={broadcast._id} broadcast={broadcast}/>
+								})}
+							</ul>
+						</div>
 			</div>
 		)
 	}

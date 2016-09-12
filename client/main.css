@@ -1,1 +1,36 @@
 /* CSS declarations go here */
+.broadcast-btn{
+	display: inline;
+	position: absolute;
+}
+
+.btn-del{
+	margin: 25px;
+}
+
+.message{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 28px;
+  margin: 0;
+  display: inline-block;
+  overflow: hidden;
+}
+.broadcastList{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: justify;
+  padding: 15px 0 15px 15px;
+  display: inline;
+}
+.form {
+margin: 50px;
+}
+.letter{
+  margin: 100px;
+  padding: 10px;
+  font-size: 26px;
+  line-height: 28px;
+}

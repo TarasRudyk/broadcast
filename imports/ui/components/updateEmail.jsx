@@ -13,9 +13,11 @@ export default class EmailUpdate extends Component {
   }
   render() {
 		return (
-			<form className="email" onSubmit={this.updateEmail.bind(this)}>
-				<input type="text" ref="email"/>
+
+			<form className="col s3 email" onSubmit={this.updateEmail.bind(this)}>
+				<label htmlFor="email">New email</label>
+				<input type="text" id="email" ref="email"/>
 			</form>
 		)
 	}
-}
+}  

@@ -31,18 +31,15 @@ export default class Profile extends TrackerReact(React.Component) {
 
 
 
-
-
 	render() {
 		return (
-			<div>
-				<h1>Profile</h1>
-					<ul>
-						{this.users().map((user)=>{
-							return <ProfileData key={user._id} user={user}/>
-						})}
-					</ul>
-			</div>
+				<div className="row">
+						<div className="col s12">
+							{this.users().map((user)=>{
+								return <ProfileData key={user._id} user={user}/>
+							})}
+						</div>
+				</div>
 		)
 	}
 }

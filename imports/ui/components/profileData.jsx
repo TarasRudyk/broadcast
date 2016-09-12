@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import NameUpdate from './updateName';
 import EmailUpdate from './updateEmail';
+import LocationUpdate from './updateLocation';
+import UpdatePassword from './updatePassword'
 
 export default class ProfileData extends Component {
 
@@ -15,21 +17,17 @@ export default class ProfileData extends Component {
 
 	render(){
 		return(
-	
-				<li>
-					<span>Change Email</span> {this.props.user.emails[0].address}<EmailUpdate />
-					<span>Change Name</span> {this.props.user.profile.name}<NameUpdate />
-					<span>Location</span> 
-						<select className="location" ref="locat" onChange={this.handleChange.bind(this)}>
-							<option defaultValue="n/a">n/a</option>
-						  <option value="Kyiv">Kyiv</option>
-						  <option value="Kharkiv">Kharkiv</option>
-						  <option value="Dnipro">Dnipro</option>
-						  <option value="Odesa">Odesa</option>
-						  <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
-						  <option value="Lviv">Lviv</option>
-						</select>
-				</li>
+				
+				<div>
+				<h1> Current User Profile </h1>
+					<h5>Email: {this.props.user.emails[0].address}</h5>
+					<h5>Name: {this.props.user.profile.name}</h5>
+					<h5>Location: {this.props.user.profile.location}</h5>
+					<EmailUpdate />
+					<NameUpdate />
+					<LocationUpdate />
+					<UpdatePassword />
+				</div>
 		
 		)
 	}

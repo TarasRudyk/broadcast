@@ -28,19 +28,19 @@ Meteor.methods({
 	
 	updateLocation(locat) {
 		Users.update(this.userId, {$set: {'profile.location': locat}});
-		console.log(locat)
 	},
 
 	setName(name) {
 		Users.update(this.userId, {$set: {'profile.name': name}});
-		console.log(name)
 	},
 
 	setEmail(email) {
 		Users.update(this.userId, {$set: {'emails' :[{'address':email, 'verified': false}]}});
-		console.log(email)
 	},
 
+	updatePassword(password) {
+		Accounts.setPassword(this.userId, password);
+	},
 
 });
 
