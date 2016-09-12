@@ -1,5 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
+import { Meteor } from 'meteor/meteor';
 
 import '../../api/publications.js';
 
@@ -12,10 +13,9 @@ export default class Broad extends TrackerReact(React.Component) {
 
   constructor(){
   	super();
-
   	this.state = {
   		subscription: {
-  			message: Meteor.subscribe("allBroadcast")
+  			message: Meteor.subscribe("userLocation")
   		}
   	}
   }

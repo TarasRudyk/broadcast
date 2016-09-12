@@ -9,8 +9,13 @@ if(Meteor.isServer){
 		return Broadcast.find();
 	});
 
+	Meteor.publish("userLocation", function(){
+		return Broadcast.find({location: Meteor.users.findOne(this.userId).profile.location});
+	});
+
 	Meteor.publish('users',function(){
-		return Users.find({_id:this.userId})
+		return Users.find({_id: this.userId})
 	});
 
 };
+

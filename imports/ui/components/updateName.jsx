@@ -14,7 +14,7 @@ export default class NameUpdate extends Component {
   render() {
 		return (
 			<form className="name" onSubmit={this.updateName.bind(this)}>
-				<input type="text" ref="name" />
+				<input type="text" ref="name"/>
 			</form>
 		)
 	}
