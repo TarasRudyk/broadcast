@@ -2,7 +2,8 @@ import { Mongo } from 'meteor/mongo';
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base'
 
-import './publications.js';
+import {Broadcast} from'./publications.js';
+import {Users} from'./publications.js';
 
 Meteor.methods({
 	

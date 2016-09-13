@@ -1,8 +1,8 @@
 import React from 'react';
 import {render} from 'react-dom';
 
-import '../../api/publications.js';
-import '../../api/methods'
+import {Users} from '../../api/publications.js';
+
 
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
 import ProfileData from '../components/profileData';

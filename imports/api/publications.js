@@ -1,8 +1,8 @@
 import { Meteor } from 'meteor/meteor'
 import { Mongo } from 'meteor/mongo';
 
-Broadcast = new Mongo.Collection('broadcast');
-Users = Meteor.users;
+export const Broadcast = new Mongo.Collection('broadcast');
+export const Users = Meteor.users;
 
 if(Meteor.isServer){
 	Meteor.publish("allBroadcast", function(){

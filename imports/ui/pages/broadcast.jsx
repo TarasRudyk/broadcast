@@ -2,7 +2,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import { Meteor } from 'meteor/meteor';
 
-import '../../api/publications.js';
+import {Broadcast} from '../../api/publications.js';
 
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
