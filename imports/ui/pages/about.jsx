@@ -18,7 +18,7 @@ export default class About extends TrackerReact(React.Component) {
 				my skills in Meteor, React, Angular, HTML, CSS, Mongodb and other technology. Have experience for calm and 
 				meticulous work and work in stressful condition. I passionate to learn IT science, as you know IT is new field for me. 
 				I am ready for the challenge. Thank you in advance for advice and for the chance to do this task.
-				If you want to rewiev find project please fallow <a href="https://github.com/TarasRudyk/broadcast" target="_blank">GitHub</a>
+				If you want to review find project please follow <a href="https://github.com/TarasRudyk/broadcast" target="_blank">GitHub</a>
 				</p>
 
 
