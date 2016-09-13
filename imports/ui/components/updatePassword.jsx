@@ -18,7 +18,7 @@ export default class UpdatePassword extends Component {
 
 			<form className="col s6 password" onSubmit={this.updatePassword.bind(this)}>
 				<label htmlFor="password">New Password</label>
-				<input type="text" id="password" ref="password"/>
+				<input type="password" id="password" ref="password" minLength="6" required/>
 			</form>
 		)
 	}

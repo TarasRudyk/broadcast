@@ -22,7 +22,7 @@ export default class MessageForm extends Component {
         <div className="row">
           <div className="input-field col s9 form">
             <textarea id="message" className="materialize-textarea" maxLength="100" 
-                type="text" ref="message"></textarea>
+                type="text" ref="message" required></textarea>
             <label htmlFor="message">Leave message here...</label>
             <button className="waves-effect waves-light btn-large col s3 broadcast-btn" type="submit" >Post</button>
           </div>

@@ -15,7 +15,7 @@ export default class LocationUpdate extends Component {
 		return (
 			<form className="col s3 location" onSubmit={this.updateLocation.bind(this)}>
 				<label htmlFor="location">New location</label>
-        <input id="location" type="text" ref="locat"/>
+        <input id="location" type="text" ref="locat" required/>
 			</form>
 		)
 	}

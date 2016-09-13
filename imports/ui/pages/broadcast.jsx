@@ -25,7 +25,7 @@ export default class Broad extends TrackerReact(React.Component) {
   }
 
 	broadcasts() {
-		return Broadcast.find().fetch();
+		return Broadcast.find({}, { sort: {createdAt: -1}}).fetch();
 	}
 
 	render() {
@@ -46,4 +46,5 @@ export default class Broad extends TrackerReact(React.Component) {
 		)
 	}
 }
+
 

@@ -15,7 +15,7 @@ export default class NameUpdate extends Component {
 		return (
 			<form className="col s3 name" onSubmit={this.updateName.bind(this)}>
 				<label htmlFor="name">New name</label>
-        <input id="name" type="text" ref="name"/>
+        <input id="name" type="text" ref="name" required/>
 			</form>
 		)
 	}

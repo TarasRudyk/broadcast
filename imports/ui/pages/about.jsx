@@ -17,7 +17,9 @@ export default class About extends TrackerReact(React.Component) {
 				I consider that, I made a huge amount of mistakes, but I ready to change, improve 
 				my skills in Meteor, React, Angular, HTML, CSS, Mongodb and other technology. Have experience for calm and 
 				meticulous work and work in stressful condition. I passionate to learn IT science, as you know IT is new field for me. 
-				I am ready for the challenge. Thank you in advance for advice and for the chance to do this task.</p>
+				I am ready for the challenge. Thank you in advance for advice and for the chance to do this task.
+				If you want to rewiev find project please fallow <a href="https://github.com/TarasRudyk/broadcast" target="_blank">GitHub</a>
+				</p>
 
 
 			</div>
