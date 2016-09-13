@@ -16,7 +16,7 @@ export default class EmailUpdate extends Component {
 
 			<form className="col s3 email" onSubmit={this.updateEmail.bind(this)}>
 				<label htmlFor="email">New email</label>
-				<input type="text" id="email" ref="email"/>
+				<input type="email" id="email" ref="email"/>
 			</form>
 		)
 	}
